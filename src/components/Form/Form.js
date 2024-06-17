@@ -12,6 +12,9 @@ const Form = ({ currentId, setCurrentId }) => {
   const dispatch = useDispatch();
   const classes = useStyles();
   const user = JSON.parse(localStorage.getItem('profile'));
+  if (user?.result?.name) {
+    user.name = user.result.name;
+  }
 
   useEffect(() => {
     if (post) setPostData(post);
