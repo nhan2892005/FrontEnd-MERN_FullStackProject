@@ -23,6 +23,9 @@ module.exports = {
       'react',
     ],
     rules: {
+      "camelcase": ["error", {"allow": ["jwt_decode"]}],
+      "no-alert": "off",
+      "import/no-extraneous-dependencies": ["error", { "devDependencies": false }],
       "no-console": 0,
       "import/extensions": 0,
       "react/prop-types": 0,

@@ -18,19 +18,8 @@ export default makeStyles((theme) => ({
   fileInput: {
     width: '97%',
     margin: '10px 0',
-    borderRadius: 5,
   },
   buttonSubmit: {
     marginBottom: 10,
-    borderRadius: 15,
-    backgroundColor: '#00c853',
-  },
-  buttonInputFile: {
-    borderRadius: 15,
-    backgroundColor: '#00c853',
-  },
-  buttonClear: {
-    borderRadius: 15,
-    backgroundColor: '#f44336',
   },
 }));
