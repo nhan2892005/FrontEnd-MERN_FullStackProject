@@ -2,7 +2,7 @@
     "name": "mern-stack-client",
     "version": "0.1.0",
     "private": true,
-    "proxy": "http://localhost:5000",
+    "proxy": "https://memo-server-u4pu.onrender.com/",
     "dependencies": {
         "@material-ui/core": "^4.9.10",
         "@material-ui/icons": "^4.9.1",
@@ -11,6 +11,7 @@
         "@testing-library/react": "^9.3.2",
         "@testing-library/user-event": "^7.1.2",
         "axios": "^0.19.2",
+        "dotenv": "^16.4.5",
         "google-auth-library": "^9.11.0",
         "jwt-decode": "^3.1.2",
         "moment": "^2.27.0",
