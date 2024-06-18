@@ -4,10 +4,10 @@
 
 ## Using:
 
+  - MongoDB
+  - Express
   - React
   - Node.js
-  - Express
-  - MongoDB
 
 ## Skill after project
   - Client Server Architecture
@@ -15,15 +15,20 @@
   - Server Side Rendering
   - Version Control Systems
   - RESTful API
-  - Database
+  - NoSQL Database
+  - JWT Login & Google OAuth
+  - Design Website
+  - Devops
   - Enviroment Variables
   - Deployed Website
 
-## Version 1.0.0
+## Version 1.0
   - Create, Edit, Like, Delete, View Post
 
+## Version 1.1
+  - Add function to Login/GoogleOAuth
+  
 ## What's next?
-  - Login
   - Pagination
   - Search
   - Comment
@@ -39,5 +44,3 @@
 Thanks your visiting,
 
 Phuc Nhan.
-
-  
