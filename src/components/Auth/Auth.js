@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import jwt_decode from 'jwt-decode';
+import { AUTH } from '../../constants/actionTypes';
 
 import Icon from './icon';
 import { signin, signup } from '../../actions/auth';
@@ -42,13 +43,11 @@ const SignUp = () => {
   const googleSuccess = async (res) => {
     const token = res.credential;
     const data = jwt_decode(token);
-    form.firstName = data.given_name;
-    form.lastName = data.family_name;
-    form.email = data.email;
-    form.password = 'no_have_password_right_now';
-    form.confirmPassword = 'no_have_password_right_now';
     try {
-      dispatch(signin(form, history));
+      // dispatch(signin(form, history));
+      dispatch({ type: AUTH, data });
+
+      history.push('/');
     } catch (error) {
       console.log(error);
     }
