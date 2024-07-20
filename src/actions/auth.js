@@ -8,9 +8,9 @@ export const signin = (formData, router) => async (dispatch) => {
     dispatch({ type: AUTH, data });
 
     router.push('/');
+  // catch error 400
   } catch (error) {
-    alert('Sorry, we will fix sign in later! Please sign up with google account!');
-    console.log(error);
+    alert(error.response.data.message);
   }
 };
 

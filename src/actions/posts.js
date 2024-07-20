@@ -37,9 +37,11 @@ export const getPostsBySearch = (searchQuery) => async (dispatch) => {
 };
 
 export const createPost = (post) => async (dispatch) => {
+  const user = JSON.parse(localStorage.getItem('profile'));
+  console.log(user);
   try {
     dispatch({ type: START_LOADING });
-    const { data } = await api.createPost(post);
+    const { data } = await api.createPost(user?.email || user?.result?.email, post);
 
     dispatch({ type: CREATE, payload: data });
     dispatch({ type: END_LOADING });
@@ -62,7 +64,7 @@ export const likePost = (id) => async (dispatch) => {
   const user = JSON.parse(localStorage.getItem('profile'));
 
   try {
-    const { data } = await api.likePost(id, user?.name);
+    const { data } = await api.likePost(id, user?.email);
 
     dispatch({ type: LIKE, payload: data });
   } catch (error) {
@@ -71,11 +73,13 @@ export const likePost = (id) => async (dispatch) => {
 };
 
 export const deletePost = (id) => async (dispatch) => {
+  const user = JSON.parse(localStorage.getItem('profile'));
+
   try {
-    await await api.deletePost(id);
+    await await api.deletePost(user?.email || user?.result?.email, id);
 
     dispatch({ type: DELETE, payload: id });
   } catch (error) {
-    console.log(error);
+    alert(error.response.data.message);
   }
 };
