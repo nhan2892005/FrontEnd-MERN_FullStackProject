@@ -9,7 +9,7 @@ export const signin = (formData, router) => async (dispatch) => {
 
     router.push('/');
   } catch (error) {
-    alert('May be you need to contact with me to sign up first. This site has some thing private. Sorry about that');
+    alert('Sorry, we will fix sign in later! Please sign up with google account!');
     console.log(error);
   }
 };
