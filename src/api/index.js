@@ -15,6 +15,7 @@ export const fetchPostsBySearch = (searchQuery) => API.get(`/posts/search?search
 export const createPost = (user, newPost) => API.post(`/posts/${user}`, newPost);
 export const likePost = (id, user) => API.patch(`/posts/${user}/likePost/${id}`);
 export const updatePost = (id, updatedPost) => API.patch(`/posts/${id}`, updatedPost);
+export const comment = (value, id) => API.post(`/posts/${id}/commentPost`, { value });
 export const deletePost = (user, id) => API.delete(`/posts/${id}/${user}`);
 export const fetchPost = (id) => API.get(`/posts/${id}`);
 

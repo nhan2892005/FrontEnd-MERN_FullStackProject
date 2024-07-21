@@ -60,4 +60,13 @@ export default makeStyles((theme) => ({
     WebkitLineClamp: 3, // Giới hạn số dòng hiển thị
     maxHeight: '72px', // Giới hạn chiều cao tương ứng với số dòng
   },
+  commentsOuterContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+  commentsInnerContainer: {
+    height: '200px',
+    overflowY: 'auto',
+    marginRight: '30px',
+  },
 }));
