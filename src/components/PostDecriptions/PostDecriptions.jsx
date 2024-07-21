@@ -48,7 +48,7 @@ const Post = () => {
           <Divider style={{ margin: '20px 0' }} />
         </div>
         <div className={classes.imageSection}>
-          <img className={classes.media} src="https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png" alt="hello" />
+          <img className={classes.media} src={post.selectedFile} alt="hello" />
         </div>
       </div>
       <Typography variant="body1"><strong>Realtime Chat - coming soon!</strong></Typography>
@@ -62,12 +62,14 @@ const Post = () => {
           <Divider />
           <div className={classes.recommendedPosts}>
             {recommendedPosts.map(({ title, name, message, likes, selectedFile, _id }) => (
-              <div style={{ margin: '20px', cursor: 'pointer' }} onClick={() => history.push(`/posts/${_id}`)} key={_id}>
-                <Typography gutterBottom variant="h6">{title}</Typography>
-                <Typography gutterBottom variant="subtitle2">{name}</Typography>
-                <Typography gutterBottom variant="subtitle2">{message}</Typography>
-                <Typography gutterBottom variant="subtitle1">Likes: {likes.length}</Typography>
-                <img src={selectedFile || 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} width="200px" alt="hello" />
+              <div className={classes.containerRecommended}>
+                <div className={classes.cardRecommend} style={{ margin: '20px', cursor: 'pointer' }} onClick={() => history.push(`/posts/${_id}`)} key={_id}>
+                  <Typography gutterBottom variant="h6">{title}</Typography>
+                  <Typography gutterBottom variant="subtitle2">{name}</Typography>
+                  <Typography gutterBottom variant="subtitle2">{message}</Typography>
+                  <Typography gutterBottom variant="subtitle1">Likes: {likes.length}</Typography>
+                  <img src={selectedFile} width="200px" alt="hello" />
+                </div>
               </div>
             ))}
           </div>

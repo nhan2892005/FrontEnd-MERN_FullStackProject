@@ -27,6 +27,7 @@ export default makeStyles((theme) => ({
     },
   },
   recommendedPosts: {
+    overflowX: 'auto',
     display: 'flex',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
@@ -34,5 +35,21 @@ export default makeStyles((theme) => ({
   },
   loadingPaper: {
     display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px', borderRadius: '15px', height: '39vh',
+  },
+  containerRecommended: {
+    display: 'flex', // Sử dụng flexbox để bố trí các thẻ card theo chiều ngang
+    flexWrap: 'nowrap',
+  },
+  cardRecommend: {
+    minWidth: '200px', // Đặt chiều rộng tối thiểu cho các thẻ card
+    backgroundColor: '#f9f9f9',
+    margin: theme.spacing(1),
+    padding: theme.spacing(2),
+    borderRadius: '5px',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+    transition: 'transform 0.2s',
+    '&:hover': {
+      transform: 'scale(1.05)',
+    },
   },
 }));
