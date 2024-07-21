@@ -52,4 +52,12 @@ export default makeStyles((theme) => ({
       transform: 'scale(1.05)',
     },
   },
+  cardContent: {
+    display: '-webkit-box',
+    WebkitBoxOrient: 'vertical',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    WebkitLineClamp: 3, // Giới hạn số dòng hiển thị
+    maxHeight: '72px', // Giới hạn chiều cao tương ứng với số dòng
+  },
 }));
