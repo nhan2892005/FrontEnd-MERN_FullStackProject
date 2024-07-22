@@ -22,6 +22,16 @@
 
 Build a Social Web App that allows users to share and interact with memories. This platform includes features for posting and viewing memories, searching, and engaging with posts through comments and likes. It also supports Google OAuth authentication for secure login and signup. This project is a great addition to your portfolio and can serve as a guide for building social networking platforms.
 
+<br>
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/user-attachments/assets/acc783f8-106e-4d08-a97e-87a69adf02f6" alt="home" style="width: 45%; margin-right: 10px;">
+  <img src="https://github.com/user-attachments/assets/6c729083-51cf-4a0f-8de0-1d020d34bbf0" alt="details" style="width: 45%;" align="right">
+</div>
+
+
+<br>
+
 ## <a name="features">🔋 Features</a>
 
 👉 **Post Memories**: Share your memories with others by creating posts.
